@@ -8,28 +8,29 @@ namespace Isik_inimene
 {
     abstract class Isik
     {
-        protected string nimi;
-        protected int synd;
-        //protected char sugu;
-        protected enum Sugu { mees, naine};
-        protected Sugu sugu;
+        public string nimi;
+        public int synd;
+        //public char sugu;
+        /*protected enum Sugu { mees, naine};
+        protected Sugu sugu;*/
 
-        public Isik(/*char sugu = 'x'*/Sugu sugu, string nimi ="----", int synd = 0)
+        public Isik() {}
+        public Isik(/*char sugu = 'x'/*Sugu sugu*//*,*/ string nimi ="----", int synd = 0)
         {
             this.nimi = nimi;
             this.synd = synd;
-            this.sugu = sugu;
+            //this.sugu = sugu;
         }
         public Isik(Isik ob)
         {
             this.nimi = ob.nimi;
             this.synd = ob.synd;
-            this.sugu = ob.sugu;
+            //this.sugu = ob.sugu;
         }
 
         public virtual void print()
         {
-            Console.Write("{0,-10} {1} {2,4}", nimi, sugu, synd);
+            Console.Write("{0,-10} {1} {2,4}", nimi, /*sugu,*/ synd);
         }
         public int arvutaVanus()
         {
@@ -37,5 +38,6 @@ namespace Isik_inimene
             return vanus;
         }
         public abstract double arvutaSissetulek(double maksuvaba, double tulumaks);
+        public abstract void print_Info();
     }
 }
