@@ -17,17 +17,18 @@ namespace Isik_inimene
         
         public Inemene(Inemene inemene)
         {
-            this.Sugu = Inemene.Sugu;
-            this.nimi = Inemene.nimi;
-            this.synd = Inemene.synd;
+            this.Sugu = inemene.Sugu;
+            this.nimi = inemene.nimi;
+            this.synd = inemene.synd;
         }
         public override double arvutaSissetulek(double maksuvaba, double tulumaks)
         {
             throw new NotImplementedException();
         }
-        public override void print_Info()
+        /*public override void print_Info()
         {
-            throw new NotImplementedException();
-        }
+            Console.WriteLine($"Nimi: {nimi}\n Sugu: {Sugu}\n Sünnipäev: {synd}");
+        }*/
+
     }
 }

@@ -2,5 +2,6 @@
 
 using Isik_inimene;
 
-Inemene inemene = new Inemene(inemene.Sugu.Mees, );
-inemene.print_Info();
+Opilane opilane = new Opilane(Isik.sugu_.Mees, "Nikita Rimitsen", 2004, "Nikita", "TARpv20", "Noorem tarkvaraarendus", 60);
+
+opilane.print();

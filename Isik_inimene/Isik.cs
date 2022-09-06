@@ -10,27 +10,26 @@ namespace Isik_inimene
     {
         public string nimi;
         public int synd;
-        //public char sugu;
-        /*protected enum Sugu { mees, naine};
-        protected Sugu sugu;*/
+        public enum sugu_ { Mees, Naine };
+        public sugu_ Sugu;
 
-        public Isik() {}
-        public Isik(/*char sugu = 'x'/*Sugu sugu*//*,*/ string nimi ="----", int synd = 0)
+        public Isik(){}
+        public Isik(sugu_ Sugu, string nimi ="----", int synd = 0)
         {
+            this.Sugu = Sugu;
             this.nimi = nimi;
             this.synd = synd;
-            //this.sugu = sugu;
         }
         public Isik(Isik ob)
         {
+            this.Sugu = ob.Sugu;
             this.nimi = ob.nimi;
             this.synd = ob.synd;
-            //this.sugu = ob.sugu;
         }
 
         public virtual void print()
         {
-            Console.Write("{0,-10} {1} {2,4}", nimi, /*sugu,*/ synd);
+            Console.Write("{0,-10} {1} {2,4}", nimi, Sugu, synd);
         }
         public int arvutaVanus()
         {
@@ -38,6 +37,9 @@ namespace Isik_inimene
             return vanus;
         }
         public abstract double arvutaSissetulek(double maksuvaba, double tulumaks);
-        public abstract void print_Info();
+
+        public void muudaNimi(string uusNimi) { nimi = uusNimi; }
+        /*public void muudaSugu(bool uusSugu) { Sugu = uusSugu; }*/
+        public void muudaSynd(int uusSynd) { synd = uusSynd; }
     }
 }
