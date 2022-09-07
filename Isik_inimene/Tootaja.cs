@@ -8,11 +8,11 @@ namespace Isik_inimene
 {
     class Tootaja : Isik
     {
-        public string asutus;
+        private string asutus;
         public string amet;
         public int tootasu;
 
-        public Tootaja(sugu_ Sugu, string nimi = "----", int synd = 0, string asutus = "----", string amet = "----", int tootasu = 0)
+        public Tootaja(sugu_ Sugu, string nimi, int synd, string asutus, string amet, int tootasu) : base(nimi, synd, asutus, amet, tootasu)
         {
             this.asutus = asutus;
             this.amet = amet;  

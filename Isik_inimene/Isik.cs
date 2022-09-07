@@ -12,6 +12,9 @@ namespace Isik_inimene
         public int synd;
         public enum sugu_ { Mees, Naine };
         public sugu_ Sugu;
+        private string asutus;
+        private string amet;
+        private int tootasu;
 
         public Isik(){}
         public Isik(sugu_ Sugu, string nimi ="----", int synd = 0)
@@ -25,6 +28,15 @@ namespace Isik_inimene
             this.Sugu = ob.Sugu;
             this.nimi = ob.nimi;
             this.synd = ob.synd;
+        }
+
+        protected Isik(string nimi, int synd, string asutus, string amet, int tootasu)
+        {
+            this.nimi = nimi;
+            this.synd = synd;
+            this.asutus = asutus;
+            this.amet = amet;
+            this.tootasu = tootasu;
         }
 
         public virtual void print()

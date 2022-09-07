@@ -31,7 +31,7 @@ namespace Isik_inimene
         }*/
         public override void print()
         {
-            Console.Write("{0,-20} {1, -10} {2,-50}", koolinimi, klass, spetsialiseerumine);
+            Console.Write($"Nimi: {nimi} Sugu: {Sugu, -10} Sünnipäev: {synd, -5}"/*,nimi, koolinimi, klass, spetsialiseerumine*/);
         }
         public override double arvutaSissetulek(double maksuvaba, double tulumaks)
         {
